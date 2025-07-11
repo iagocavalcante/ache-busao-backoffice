@@ -8,8 +8,7 @@ config :ache_busao_backoffice, AcheBusaoBackoffice.Repo,
   database: "ache_busao_backoffice_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10,
-  extensions: [Geo.PostGIS.Extension]
+  pool_size: 10
 
 # For development, we disable any cache and enable
 # debugging and code reloading.

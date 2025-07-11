@@ -15,6 +15,12 @@ defmodule AcheBusaoBackofficeWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :api_rate_limited do
+    plug :accepts, ["json"]
+    plug :put_secure_browser_headers
+    plug AcheBusaoBackofficeWeb.Plugs.RateLimiter, endpoint: "update_location", max_requests: 10, window_ms: 60_000
+  end
+
   scope "/", AcheBusaoBackofficeWeb do
     pipe_through :browser
 
@@ -33,9 +39,13 @@ defmodule AcheBusaoBackofficeWeb.Router do
 
     scope "/bus" do
       post "/start-session", BusController, :start_session
-      put "/update-location/:session_id", BusController, :update_location
       delete "/end-session/:session_id", BusController, :end_session
       get "/positions", BusController, :positions
+
+      scope "/", as: :bus do
+        pipe_through :api_rate_limited
+        put "/update-location/:session_id", BusController, :update_location
+      end
     end
   end
 

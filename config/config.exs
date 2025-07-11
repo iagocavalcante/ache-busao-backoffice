@@ -9,7 +9,8 @@ import Config
 
 config :ache_busao_backoffice,
   ecto_repos: [AcheBusaoBackoffice.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  ecto_sql_features: [:json_library]
 
 # Configures the endpoint
 config :ache_busao_backoffice, AcheBusaoBackofficeWeb.Endpoint,
@@ -60,6 +61,8 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :postgrex, types: AcheBusaoBackoffice.Repo.PostgresTypes
 
 config :hammer,
   backend: {Hammer.Backend.ETS, [expiry_ms: 60_000 * 60 * 2, cleanup_interval_ms: 60_000 * 10]}

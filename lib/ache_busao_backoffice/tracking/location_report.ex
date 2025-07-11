@@ -19,8 +19,8 @@ defmodule AcheBusaoBackoffice.Tracking.LocationReport do
   @doc false
   def changeset(location_report, attrs) do
     location_report
-    |> cast(attrs, [:location, :accuracy, :timestamp, :is_valid, :session_id])
-    |> validate_required([:location, :session_id])
+    |> cast(attrs, [:location, :accuracy, :timestamp, :is_valid, :device_session_id])
+    |> validate_required([:location, :device_session_id])
     |> put_timestamp()
   end
 
