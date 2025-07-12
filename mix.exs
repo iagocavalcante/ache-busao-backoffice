@@ -63,7 +63,7 @@ defmodule AcheBusaoBackoffice.MixProject do
       {:hammer, "~> 6.0"},
       {:phoenix_pubsub, "~> 2.0"},
       {:plug_crypto, "~> 1.2"},
-      {:cachex, "~> 3.4"}
+      {:cachex, "~> 4.0"}
     ]
   end
 
