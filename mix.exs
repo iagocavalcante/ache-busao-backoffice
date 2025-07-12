@@ -62,7 +62,7 @@ defmodule AcheBusaoBackoffice.MixProject do
       {:geo_postgis, "~> 3.4"},
       {:hammer, "~> 7.0"},
       {:phoenix_pubsub, "~> 2.0"},
-      {:plug_crypto, "~> 1.2"},
+      {:plug_crypto, "~> 2.0"},
       {:cachex, "~> 4.0"}
     ]
   end
