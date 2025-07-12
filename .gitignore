@@ -35,3 +35,5 @@ ache_busao_backoffice-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Environment files
+.env
