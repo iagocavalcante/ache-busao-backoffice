@@ -60,7 +60,7 @@ defmodule AcheBusaoBackoffice.MixProject do
       {:bandit, "~> 1.5"},
       {:geo, "~> 4.0"},
       {:geo_postgis, "~> 3.4"},
-      {:hammer, "~> 6.0"},
+      {:hammer, "~> 7.0"},
       {:phoenix_pubsub, "~> 2.0"},
       {:plug_crypto, "~> 1.2"},
       {:cachex, "~> 4.0"}
