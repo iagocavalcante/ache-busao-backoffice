@@ -58,7 +58,7 @@ defmodule AcheBusaoBackoffice.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
-      {:geo, "~> 3.4"},
+      {:geo, "~> 4.0"},
       {:geo_postgis, "~> 3.4"},
       {:hammer, "~> 6.0"},
       {:phoenix_pubsub, "~> 2.0"},
